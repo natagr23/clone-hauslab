@@ -26,23 +26,28 @@ const TutorialHeader = () => (
           aria-label="Open menu"
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
+          isCollapsible
         />
-        <HeaderName element={Link} to="/" prefix="IBM">
-          Carbon Tutorial
-        </HeaderName>
+
+        <HeaderName element={Link} to="/" prefix="Haus Labs by"></HeaderName>
         <HeaderNavigation aria-label="Carbon Tutorial">
           <HeaderMenuItem element={Link} to="/repos">
-            Repositories
+            Search
           </HeaderMenuItem>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
           expanded={isSideNavExpanded}
           isPersistent={false}
+          isFixedNav={true}
+          // onToggle={onClickSideNavExpand}
+          // isRail={true}
+          // addFocusListeners={true}
+          addMouseListeners={true}
         >
-          <SideNavItems>
+          <SideNavItems expanded={isSideNavExpanded}>
             <HeaderSideNavItems>
-              <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
+              <HeaderMenuItem href="/repos">Search</HeaderMenuItem>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
@@ -59,7 +64,10 @@ const TutorialHeader = () => (
           >
             <UserAvatar size={20} />
           </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
+          <HeaderGlobalAction
+            aria-label="App Switcher"
+            tooltipAlignment="center"
+          >
             <Switcher size={20} />
           </HeaderGlobalAction>
         </HeaderGlobalBar>

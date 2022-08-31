@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './app.scss';
+import './carbon-override.scss';
 import { Content, Theme } from '@carbon/react';
 import TutorialHeader from './components/TutorialHeader';
 import { Route, Switch } from 'react-router-dom';
@@ -10,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Theme theme="g100">
+        <Theme theme="g10">
           <TutorialHeader />
         </Theme>
         <Content>
