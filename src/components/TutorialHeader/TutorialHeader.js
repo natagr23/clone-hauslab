@@ -13,7 +13,6 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from '@carbon/react';
-
 import { Switcher, Notification, UserAvatar } from '@carbon/react/icons';
 import { Link } from 'react-router-dom';
 
@@ -26,28 +25,21 @@ const TutorialHeader = () => (
           aria-label="Open menu"
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
-          isCollapsible
         />
-
-        <HeaderName element={Link} to="/" prefix="Haus Labs by"></HeaderName>
+        <HeaderName element={Link} to="/" prefix="IBM">
+          Carbon Tutorial
+        </HeaderName>
         <HeaderNavigation aria-label="Carbon Tutorial">
-          <HeaderMenuItem element={Link} to="/repos">
-            Search
-          </HeaderMenuItem>
+          <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
           expanded={isSideNavExpanded}
           isPersistent={false}
-          isFixedNav={true}
-          // onToggle={onClickSideNavExpand}
-          // isRail={true}
-          // addFocusListeners={true}
-          addMouseListeners={true}
         >
-          <SideNavItems expanded={isSideNavExpanded}>
+          <SideNavItems>
             <HeaderSideNavItems>
-              <HeaderMenuItem href="/repos">Search</HeaderMenuItem>
+              <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
@@ -64,10 +56,7 @@ const TutorialHeader = () => (
           >
             <UserAvatar size={20} />
           </HeaderGlobalAction>
-          <HeaderGlobalAction
-            aria-label="App Switcher"
-            tooltipAlignment="center"
-          >
+          <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
             <Switcher size={20} />
           </HeaderGlobalAction>
         </HeaderGlobalBar>

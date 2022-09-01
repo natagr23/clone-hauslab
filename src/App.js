@@ -3,7 +3,7 @@ import './app.scss';
 import './carbon-override.scss';
 import { Content, Theme } from '@carbon/react';
 import TutorialHeader from './components/TutorialHeader';
-import { Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Routes } from 'react-router-dom';
 import LandingPage from './content/LandingPage';
 import RepoPage from './content/RepoPage';
 
@@ -11,15 +11,18 @@ class App extends Component {
   render() {
     return (
       <>
-        <Theme theme="g10">
-          <TutorialHeader />
-        </Theme>
-        <Content>
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route path="/repos" component={RepoPage} />
-          </Switch>
-        </Content>
+        <BrowserRouter>
+          <Theme theme="g100">
+            <TutorialHeader />
+          </Theme>
+
+          <Content>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/repos" element={<RepoPage />} />
+            </Routes>
+          </Content>
+        </BrowserRouter>
       </>
     );
   }
