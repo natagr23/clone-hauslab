@@ -1,42 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RepoTable from './RepoTable';
-import { Link, Grid, Column } from '@carbon/react';
+import {
+  Link,
+  DataTableSkeleton,
+  Pagination,
+  Grid,
+  Column,
+} from '@carbon/react';
 
-// import { gql, useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 
-// const REPO_QUERY = gql`
-//   query REPO_QUERY {
-//     # Let's use carbon as our organization
-//     organization(login: "carbon-design-system") {
-//       # We'll grab all the repositories in one go. To load more resources
-//       # continuously, see the advanced topics.
-//       repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
-//         totalCount
-//         nodes {
-//           url
-//           homepageUrl
-//           issues(filterBy: { states: OPEN }) {
-//             totalCount
-//           }
-//           stargazers {
-//             totalCount
-//           }
-//           releases(first: 1) {
-//             totalCount
-//             nodes {
-//               name
-//             }
-//           }
-//           name
-//           updatedAt
-//           createdAt
-//           description
-//           id
-//         }
-//       }
-//     }
-//   }
-// `;
+const REPO_QUERY = gql`
+  query REPO_QUERY {
+    # Let's use carbon as our organization
+    organization(login: "carbon-design-system") {
+      # We'll grab all the repositories in one go. To load more resources
+      # continuously, see the advanced topics.
+      repositories(first: 75, orderBy: { field: UPDATED_AT, direction: DESC }) {
+        totalCount
+        nodes {
+          url
+          homepageUrl
+          issues(filterBy: { states: OPEN }) {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+          releases(first: 1) {
+            totalCount
+            nodes {
+              name
+            }
+          }
+          name
+          updatedAt
+          createdAt
+          description
+          id
+        }
+      }
+    }
+  }
+`;
 
 const LinkList = ({ url, homepageUrl }) => (
   <ul style={{ display: 'flex' }}>
@@ -91,28 +97,58 @@ const headers = [
 ];
 
 const RepoPage = () => {
-  // const { loading, error, data } = useQuery(REPO_QUERY);
+  const [firstRowIndex, setFirstRowIndex] = useState(0);
+  const [currentPageSize, setCurrentPageSize] = useState(10);
+  const { loading, error, data } = useQuery(REPO_QUERY);
 
-  // if (loading) {
-  //   return 'Loading...';
-  // }
+  if (loading) {
+    return (
+      <Grid className="repo-page">
+        <Column lg={16} md={8} sm={4} className="repo-page__r1">
+          <DataTableSkeleton
+            columnCount={headers.length + 1}
+            rowCount={10}
+            headers={headers}
+          />
+        </Column>
+      </Grid>
+    );
+  }
 
-  // if (error) {
-  //   return `Error! ${error.message}`;
-  // }
+  if (error) {
+    return `Error! ${error.message}`;
+  }
 
-  // if (data) {
-  //   // If we're here, we've got our data!
-  //   console.log(data.organization);
-  // }
-  // const { repositories } = data.organization;
-  // const rows = getRowItems(repositories.nodes);
+  if (data) {
+    // If we're here, we've got our data!
+    console.log(data.organization);
+  }
+  const { repositories } = data.organization;
+  const rows = getRowItems(repositories.nodes);
 
   return (
     <Grid className="repo-page">
       <Column lg={16} md={8} sm={4} className="repo-page__r1">
-        {/* <RepoTable headers={headers} rows={rows} /> */}
-        <p>data</p>
+        <RepoTable
+          headers={headers}
+          rows={rows.slice(firstRowIndex, firstRowIndex + currentPageSize)}
+        />
+        <Pagination
+          totalItems={rows.length}
+          backwardText="Previous page"
+          forwardText="Next page"
+          pageSize={currentPageSize}
+          pageSizes={[5, 10, 15, 25]}
+          itemsPerPageText="Items per page"
+          onChange={({ page, pageSize }) => {
+            if (pageSize !== currentPageSize) {
+              setCurrentPageSize(pageSize);
+            }
+            setFirstRowIndex(pageSize * (page - 1));
+          }}
+        />
+
+        {/* <p>data</p> */}
       </Column>
     </Grid>
   );
