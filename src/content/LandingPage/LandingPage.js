@@ -17,7 +17,7 @@ const LandingPage = () => {
   return (
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
-        <Breadcrumb noTrailingSlash>
+        <Breadcrumb noTrailingSlash aria-label="Page navigation">
           <BreadcrumbItem>
             <a href="/">Getting started</a>
           </BreadcrumbItem>
@@ -28,7 +28,7 @@ const LandingPage = () => {
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
         <Tabs defaultSelectedIndex={0}>
-          <TabList className="tabs-group">
+          <TabList className="tabs-group" aria-label="Tab navigation">
             <Tab>About</Tab>
             <Tab>Design</Tab>
             <Tab>Develop</Tab>
@@ -53,7 +53,11 @@ const LandingPage = () => {
                   <Button>Learn more</Button>
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
-                  IMAGE WILL GO HERE
+                  <img
+                    className="landing-page__illo"
+                    src={`https://react-step-6--carbon-tutorial.netlify.app/tab-illo.png`}
+                    alt="Carbon illustration"
+                  />
                 </Column>
               </Grid>
             </TabPanel>
@@ -89,16 +93,16 @@ const LandingPage = () => {
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
         <Grid>
           <Column md={4} lg={4} sm={4}>
-            1/4
+            <h3 className="landing-page__label">The Principles</h3>
           </Column>
           <Column md={4} lg={4} sm={4}>
-            1/4
+            Carbon is Open
           </Column>
           <Column md={4} lg={4} sm={4}>
-            1/4
+            Carbon is Modular
           </Column>
           <Column md={4} lg={4} sm={4}>
-            1/4
+            Carbon is Consistent
           </Column>
         </Grid>
       </Column>

@@ -26,9 +26,7 @@ const TutorialHeader = () => (
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
         />
-        <HeaderName element={Link} to="/" prefix="IBM">
-          Carbon Tutorial
-        </HeaderName>
+        <HeaderName element={Link} to="/" prefix="Natalia Garcia"></HeaderName>
         <HeaderNavigation aria-label="Carbon Tutorial">
           <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
         </HeaderNavigation>

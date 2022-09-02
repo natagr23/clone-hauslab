@@ -7,15 +7,21 @@ import App from './App';
 import 'core-js/es/array';
 import 'core-js/es/string';
 import 'core-js/es/object';
-// import 'core-js/modules/es7.array.includes';
-// import 'core-js/modules/es6.array.fill';
-// import 'core-js/modules/es6.string.includes';
-// import 'core-js/modules/es6.string.trim';
-// import 'core-js/modules/es7.object.values';
+// import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+
+// const cache = new InMemoryCache();
+
+// const client = new ApolloClient({
+//   cache: cache,
+//   uri: 'https://api.github.com/graphql',
+//   headers: {
+//     authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
+//   },
+// });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <ApolloProvider client={client}>
+  <App />
+  // </ApolloProvider>
 );
