@@ -11,9 +11,11 @@ import {
   TabPanel,
   Grid,
   Column,
+  Link,
 } from '@carbon/react';
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '../../components/Info';
+import profileImg from '../../Data/foto.JPG';
 
 const LandingPage = () => {
   return (
@@ -33,8 +35,9 @@ const LandingPage = () => {
         <Tabs defaultSelectedIndex={0}>
           <TabList className="tabs-group" aria-label="Tab navigation">
             <Tab>About</Tab>
-            <Tab>Design</Tab>
-            <Tab>Develop</Tab>
+            <Tab>Photo catalogue</Tab>
+            <Tab>Agro products</Tab>
+            <Tab>clone App</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -52,12 +55,17 @@ const LandingPage = () => {
                     meteorological data to evaluate a hydrological model using
                     R.
                   </p>
-                  <Button>LinkedIn Profile</Button>
+
+                  <Link
+                    href={'https://www.linkedin.com/in/nataliagarciarosas/'}
+                  >
+                    <Button>LinkedIn Profile</Button>
+                  </Link>
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                   <img
                     className="landing-page__illo"
-                    src={`https://react-step-6--carbon-tutorial.netlify.app/tab-illo.png`}
+                    src={profileImg}
                     alt="Carbon illustration"
                   />
                 </Column>
@@ -85,6 +93,19 @@ const LandingPage = () => {
                   className="landing-page__tab-content"
                 >
                   Carbon provides styles and components in Vanilla, React,
+                  Angular, and Vue for anyone building on the web.
+                </Column>
+              </Grid>
+            </TabPanel>
+            <TabPanel>
+              <Grid className="tabs-group-content">
+                <Column
+                  lg={16}
+                  md={8}
+                  sm={4}
+                  className="landing-page__tab-content"
+                >
+                  Carbon2222 provides styles and components in Vanilla, React,
                   Angular, and Vue for anyone building on the web.
                 </Column>
               </Grid>
