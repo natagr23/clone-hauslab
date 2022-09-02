@@ -20,13 +20,14 @@ const LandingPage = () => {
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
         <Breadcrumb noTrailingSlash aria-label="Page navigation">
-          <BreadcrumbItem>
+          {/* <BreadcrumbItem>
             <a href="/">Getting started</a>
-          </BreadcrumbItem>
+          </BreadcrumbItem> */}
         </Breadcrumb>
-        <h1 className="landing-page__heading">
-          Design &amp; build with Carbon
-        </h1>
+        <h3 className="landing-page__heading">
+          {/* Design &amp; build with Carbon */}
+          Portafolio
+        </h3>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
         <Tabs defaultSelectedIndex={0}>
@@ -44,15 +45,14 @@ const LandingPage = () => {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  <h2 className="landing-page__subheading">What is Carbon?</h2>
+                  <h2 className="landing-page__subheading">Experience</h2>
                   <p className="landing-page__p">
-                    Carbon is IBM’s open-source design system for digital
-                    products and experiences. With the IBM Design Language as
-                    its foundation, the system consists of working code, design
-                    tools and resources, human interface guidelines, and a
-                    vibrant community of contributors.
+                    I have knowledge in web development (React.js, Javascript,
+                    HTML5, CSS, ). During my master's studies I used
+                    meteorological data to evaluate a hydrological model using
+                    R.
                   </p>
-                  <Button>Learn more</Button>
+                  <Button>LinkedIn Profile</Button>
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                   <img
