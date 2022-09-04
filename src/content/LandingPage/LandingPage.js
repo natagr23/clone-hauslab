@@ -13,9 +13,43 @@ import {
   Column,
   Link,
 } from '@carbon/react';
+// import { ContentGroupCards } from '@carbon/ibmdotcom-react';
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '../../components/Info';
 import profileImg from '../../Data/foto.JPG';
+
+const heading = 'Lorem ipsum dolor sit amet.';
+
+const items = [
+  {
+    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    cta: {
+      href: 'https://www.example.com',
+    },
+  },
+  {
+    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    cta: {
+      href: 'https://www.example.com',
+    },
+  },
+  {
+    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    cta: {
+      href: 'https://www.example.com',
+    },
+  },
+  {
+    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    cta: {
+      href: 'https://www.example.com',
+    },
+  },
+];
 
 const LandingPage = () => {
   return (
@@ -79,8 +113,7 @@ const LandingPage = () => {
                   sm={4}
                   className="landing-page__tab-content"
                 >
-                  Rapidly build beautiful and accessible experiences. The Carbon
-                  kit contains all resources you need to get started.
+                  {/* <ContentGroupCards heading={heading} content={content} /> */}
                 </Column>
               </Grid>
             </TabPanel>

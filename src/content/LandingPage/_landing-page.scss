@@ -4,6 +4,15 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use '@carbon/react/scss/theme' as *;
 @use './mixins.scss' as *;
+// @use '@carbon/ibmdotcom-styles' as *;
+
+//cards
+// @import '@carbon/type/scss/font-face/mono';
+// @import '@carbon/type/scss/font-face/sans';
+// @include carbon--font-face-mono();
+// @include carbon--font-face-sans();
+
+// @import '@carbon/ibmdotcom-styles/scss/components/content-group-cards/index';
 
 .landing-page__illo {
   max-width: 50%;
