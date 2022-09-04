@@ -30,7 +30,7 @@ const TutorialHeader = () => (
           Natalia García Rosas
         </HeaderName>
         <HeaderNavigation aria-label="Carbon Tutorial">
-          <HeaderMenuItem href="/repos">Contact</HeaderMenuItem>
+          <HeaderMenuItem href="/repos">Resume</HeaderMenuItem>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
@@ -39,7 +39,7 @@ const TutorialHeader = () => (
         >
           <SideNavItems>
             <HeaderSideNavItems>
-              <HeaderMenuItem href="/repos">Contact</HeaderMenuItem>
+              <HeaderMenuItem href="/repos">Resume</HeaderMenuItem>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>

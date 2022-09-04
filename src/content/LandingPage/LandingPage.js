@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   Breadcrumb,
-  BreadcrumbItem,
   Button,
   Tabs,
   Tab,
@@ -13,57 +12,20 @@ import {
   Column,
   Link,
 } from '@carbon/react';
-// import { ContentGroupCards } from '@carbon/ibmdotcom-react';
+
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '../../components/Info';
 import profileImg from '../../Data/foto.JPG';
-
-const heading = 'Lorem ipsum dolor sit amet.';
-
-const items = [
-  {
-    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    cta: {
-      href: 'https://www.example.com',
-    },
-  },
-  {
-    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    cta: {
-      href: 'https://www.example.com',
-    },
-  },
-  {
-    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    cta: {
-      href: 'https://www.example.com',
-    },
-  },
-  {
-    heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    cta: {
-      href: 'https://www.example.com',
-    },
-  },
-];
 
 const LandingPage = () => {
   return (
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
-        <Breadcrumb noTrailingSlash aria-label="Page navigation">
-          {/* <BreadcrumbItem>
-            <a href="/">Getting started</a>
-          </BreadcrumbItem> */}
-        </Breadcrumb>
-        <h3 className="landing-page__heading">
+        <Breadcrumb noTrailingSlash aria-label="Page navigation"></Breadcrumb>
+        <h5 className="landing-page__heading">
           {/* Design &amp; build with Carbon */}
           Portafolio
-        </h3>
+        </h5>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
         <Tabs defaultSelectedIndex={0}>
@@ -71,7 +33,7 @@ const LandingPage = () => {
             <Tab>About</Tab>
             <Tab>Photo catalogue</Tab>
             <Tab>Agro products</Tab>
-            <Tab>clone App</Tab>
+            <Tab>Clone App</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -85,9 +47,9 @@ const LandingPage = () => {
                   <h2 className="landing-page__subheading">Experience</h2>
                   <p className="landing-page__p">
                     I have knowledge in web development (React.js, Javascript,
-                    HTML5, CSS, ). During my master's studies I used
-                    meteorological data to evaluate a hydrological model using
-                    R.
+                    HTML5, CSS, Carbon Design, MUI,Bootstrap, Tailwind,
+                    Firebase). During my master's studies I used meteorological
+                    data to evaluate a hydrological model using R.
                   </p>
 
                   <Link
@@ -95,6 +57,19 @@ const LandingPage = () => {
                   >
                     <Button>LinkedIn Profile</Button>
                   </Link>
+                  <hr />
+                  <Link href={'https://github.com/natagr23'}>
+                    <Button>Github Profile</Button>
+                  </Link>
+                  <hr />
+                  <Link
+                    href={
+                      'mailto:nata_garcia23@hotmail.com?body=My custom mail body'
+                    }
+                  >
+                    <Button>Contact me</Button>
+                  </Link>
+                  <hr />
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                   <img
@@ -112,9 +87,7 @@ const LandingPage = () => {
                   md={8}
                   sm={4}
                   className="landing-page__tab-content"
-                >
-                  {/* <ContentGroupCards heading={heading} content={content} /> */}
-                </Column>
+                ></Column>
               </Grid>
             </TabPanel>
             <TabPanel>
