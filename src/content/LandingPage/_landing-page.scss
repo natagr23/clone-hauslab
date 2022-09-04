@@ -6,7 +6,7 @@
 @use './mixins.scss' as *;
 
 .landing-page__illo {
-  max-width: 45%;
+  max-width: 40%;
 }
 
 .landing-page__banner {
@@ -45,9 +45,9 @@
 }
 
 .landing-page__r3 {
-  padding-top: $spacing-07;
-  padding-bottom: $spacing-09;
-  padding-left: $spacing-06;
+  padding-top: $spacing-02;
+  padding-bottom: $spacing-04;
+  padding-left: $spacing-04;
   @include landing-page-background;
 }
 
