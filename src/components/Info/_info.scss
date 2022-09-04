@@ -8,17 +8,17 @@
 }
 
 .info-card__heading {
-  @include type-style('productive-heading-03');
+  @include type-style('productive-heading-02');
 }
 
 .info-card {
   margin-top: $spacing-09;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   padding-left: 1rem;
 
   svg {
-    margin-top: $spacing-09;
+    margin-top: $spacing-07;
   }
 
   // top border in only small breakpoints to prevent overrides

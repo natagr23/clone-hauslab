@@ -13,7 +13,7 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from '@carbon/react';
-import { Switcher, Notification, UserAvatar } from '@carbon/react/icons';
+// import { Switcher, Notification, UserAvatar } from '@carbon/react/icons';
 import { Link } from 'react-router-dom';
 
 const TutorialHeader = () => (

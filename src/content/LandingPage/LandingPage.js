@@ -13,7 +13,7 @@ import {
   Link,
 } from '@carbon/react';
 
-import { Globe, LogoLinkedin, LogoGithub, Email } from '@carbon/react/icons';
+import { LogoLinkedin, LogoGithub, Email } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '../../components/Info';
 import profileImg from '../../Data/foto.JPG';
 
@@ -57,13 +57,13 @@ const LandingPage = () => {
                   >
                     <Button>
                       {' '}
-                      <LogoLinkedin size={30} />
+                      <LogoLinkedin size={20} />
                     </Button>
                   </Link>
                   <hr />
                   <Link href={'https://github.com/natagr23'}>
                     <Button>
-                      <LogoGithub size={30} />
+                      <LogoGithub size={20} />
                       {/* Github Profile */}
                     </Button>
                   </Link>
@@ -74,7 +74,7 @@ const LandingPage = () => {
                     }
                   >
                     <Button>
-                      <Email size={30} />
+                      <Email size={20} />
                       Contact me
                     </Button>
                   </Link>
@@ -129,22 +129,32 @@ const LandingPage = () => {
         </Tabs>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r3">
-        <InfoSection heading="Connect with me" className="landing-page__r3">
+        <InfoSection
+          heading="Tools and Contact Information                         "
+          className="landing-page__r3"
+        >
+          <InfoCard
+            heading="Tools"
+            icon={() => (
+              <img
+                src="https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white"
+                alt="Carbon2 illustration"
+              />
+            )}
+            body={
+              <img
+                src="https://img.shields.io/badge/IBM-052FAD?style=for-the-badge&logo=IBM&logoColor=white"
+                alt="Carbon2 illustration"
+              />
+            }
+          />
+
           <InfoCard
             heading="LinkedIn"
-            body="It's a distributed effort, guided by the principles of the open-source movement. Carbon's users are also it's makers, and everyone is encouraged to contribute."
             icon={() => <LogoLinkedin size={32} />}
           />
-          <InfoCard
-            heading="Github"
-            body="Carbon's modularity ensures maximum flexibility in execution. It's components are designed to work seamlessly with each other, in whichever combination suits the needs of the user."
-            icon={() => <LogoGithub size={32} />}
-          />
-          <InfoCard
-            heading="Email"
-            body="Based on the comprehensive IBM Design Language, every element and component of Carbon was designed from the ground up to work elegantly together to ensure consistent, cohesive user experiences."
-            icon={() => <Email size={32} />}
-          />
+          <InfoCard heading="Github" icon={() => <LogoGithub size={32} />} />
+          <InfoCard heading="Email" icon={() => <Email size={32} />} />
         </InfoSection>
       </Column>
     </Grid>
