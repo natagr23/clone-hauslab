@@ -143,7 +143,7 @@ const LandingPage = () => {
             )}
             body={
               <img
-                src="https://img.shields.io/badge/IBM-052FAD?style=for-the-badge&logo=IBM&logoColor=white"
+                src="https://badges.aleen42.com/src/react.svg"
                 alt="Carbon2 illustration"
               />
             }
@@ -151,10 +151,33 @@ const LandingPage = () => {
 
           <InfoCard
             heading="LinkedIn"
-            icon={() => <LogoLinkedin size={32} />}
+            icon={() => (
+              <Link href={'https://www.linkedin.com/in/nataliagarciarosas/'}>
+                <LogoLinkedin size={32} />
+              </Link>
+            )}
           />
-          <InfoCard heading="Github" icon={() => <LogoGithub size={32} />} />
-          <InfoCard heading="Email" icon={() => <Email size={32} />} />
+          <InfoCard
+            heading="Github"
+            icon={() => (
+              <Link href={'https://github.com/natagr23'}>
+                <LogoGithub size={32} />
+              </Link>
+            )}
+          />
+          <InfoCard
+            heading="Email"
+            icon={() => (
+              <Link
+                href={
+                  'mailto:nata_garcia23@hotmail.com?body=My custom mail body'
+                }
+              >
+                {' '}
+                <Email size={32} />
+              </Link>
+            )}
+          />
         </InfoSection>
       </Column>
     </Grid>

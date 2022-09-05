@@ -42,13 +42,13 @@
     border-left: 1px solid $border-subtle-01;
 
     svg {
-      margin-top: $spacing-12;
+      // margin-top: $spacing-12;
     }
   }
 }
 
 .info-card__body {
-  margin-top: $spacing-06;
+  margin-top: $spacing-02;
   flex-grow: 1; // fill space so icons are bottom aligned
   @include type-style('body-long-01');
 

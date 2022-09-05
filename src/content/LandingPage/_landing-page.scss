@@ -47,8 +47,8 @@
 .landing-page__r3 {
   padding-top: $spacing-07;
   padding-bottom: $spacing-09;
-  padding-left: $spacing-06;
-  @include landing-page-background;
+  padding-left: $spacing-04;
+  // @include landing-page-background;
 }
 
 .landing-page__label {
