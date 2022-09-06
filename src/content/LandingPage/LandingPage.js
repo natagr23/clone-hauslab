@@ -122,6 +122,10 @@ const LandingPage = () => {
                 <div>3</div>
                 <div>4</div>
               </AwesomeSlider>
+              <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                <h3> &nbsp; </h3>
+                <h3> &nbsp;</h3>
+              </Column>
             </TabPanel>
             <TabPanel>
               <Grid className="tabs-group-content">
