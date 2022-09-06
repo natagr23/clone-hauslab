@@ -2,6 +2,9 @@ import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
+import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
+import CoreStyles from 'react-awesome-slider/src/core/styles.scss';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
 import {
   Breadcrumb,
@@ -21,6 +24,7 @@ import { InfoSection, InfoCard } from '../../components/Info';
 import profileImg from '../../Data/foto.JPG';
 
 const LandingPage = () => {
+  const AutoplaySlider = withAutoplay(AwesomeSlider);
   const data = [
     {
       id: '1',
@@ -116,12 +120,23 @@ const LandingPage = () => {
               </Grid>
             </TabPanel>
             <TabPanel>
-              <AwesomeSlider animation="cubeAnimation">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+              <AutoplaySlider
+                play={true}
+                cancelOnInteraction={false} // should stop playing on user interaction
+                interval={6000}
+              >
+                <div>
+                  <img
+                    className="landing-page__illo"
+                    src={profileImg}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div data-src="/twitter-green.png">2</div>
+                <div data-src="/unsplash.png">3</div>
+
                 <div>4</div>
-              </AwesomeSlider>
+              </AutoplaySlider>
               <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                 <h3> &nbsp; </h3>
                 <h3> &nbsp;</h3>
