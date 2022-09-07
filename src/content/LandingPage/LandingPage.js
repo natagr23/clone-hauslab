@@ -29,6 +29,9 @@ import crudAppImg4 from '../../Data/crud4.jpg';
 import crudAppImg5 from '../../Data/crud5.jpg';
 import crudAppImg6 from '../../Data/crud6.jpg';
 import crudAppImg7 from '../../Data/crud7.jpg';
+import catalogueImg1 from '../../Data/catalogue1.JPG';
+import catalogueImg2 from '../../Data/catalogue2.JPG';
+import catalogueImg3 from '../../Data/catalogue3.JPG';
 
 const LandingPage = () => {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -108,7 +111,7 @@ const LandingPage = () => {
               <AutoplaySlider
                 play={true}
                 cancelOnInteraction={false} // should stop playing on user interaction
-                interval={6000}
+                interval={5000}
               >
                 <div>
                   <img
@@ -167,57 +170,37 @@ const LandingPage = () => {
               </Column>
             </TabPanel>
             <TabPanel>
-              <Grid className="tabs-group-content">
-                <Column
-                  md={4}
-                  lg={7}
-                  sm={4}
-                  className="landing-page__tab-content"
-                >
-                  <h2 className="landing-page__subheading">Experience</h2>
-                  <p className="landing-page__p2">
-                    I have knowledge in web development (React.js, Javascript,
-                    HTML5, CSS, Carbon Design, MUI,Bootstrap, Tailwind,
-                    Firebase). During my master's studies I used meteorological
-                    data to evaluate a hydrological model using R.
-                  </p>
-                  <hr />
-                  <Link
-                    href={'https://www.linkedin.com/in/nataliagarciarosas/'}
-                  >
-                    <Button>
-                      {' '}
-                      <LogoLinkedin size={20} />
-                    </Button>
-                  </Link>
-                  <hr />
-                  <Link href={'https://github.com/natagr23'}>
-                    <Button>
-                      <LogoGithub size={20} />
-                      {/* Github Profile */}
-                    </Button>
-                  </Link>
-                  <hr />
-                  <Link
-                    href={
-                      'mailto:nata_garcia23@hotmail.com?body=My custom mail body'
-                    }
-                  >
-                    <Button>
-                      <Email size={20} />
-                      Contact me
-                    </Button>
-                  </Link>
-                  <hr />
-                </Column>
-                <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+              <AutoplaySlider
+                play={true}
+                cancelOnInteraction={false} // should stop playing on user interaction
+                interval={5000}
+              >
+                <div>
                   <img
-                    className="landing-page__illo"
-                    src={profileImg}
+                    className="landing-page__crud"
+                    src={catalogueImg1}
                     alt="Carbon illustration"
                   />
-                </Column>
-              </Grid>
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={catalogueImg2}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={catalogueImg3}
+                    alt="Carbon illustration"
+                  />
+                </div>
+              </AutoplaySlider>
+              <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                <h3> &nbsp; </h3>
+                <h3> &nbsp;</h3>
+              </Column>
             </TabPanel>
             <TabPanel>
               <Grid className="tabs-group-content">
