@@ -22,32 +22,17 @@ import {
 import { LogoLinkedin, LogoGithub, Email } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '../../components/Info';
 import profileImg from '../../Data/foto.JPG';
+import crudAppImg1 from '../../Data/crud1.jpg';
+import crudAppImg2 from '../../Data/crud2.jpg';
+import crudAppImg3 from '../../Data/crud3.jpg';
+import crudAppImg4 from '../../Data/crud4.jpg';
+import crudAppImg5 from '../../Data/crud5.jpg';
+import crudAppImg6 from '../../Data/crud6.jpg';
+import crudAppImg7 from '../../Data/crud7.jpg';
 
 const LandingPage = () => {
   const AutoplaySlider = withAutoplay(AwesomeSlider);
-  const data = [
-    {
-      id: '1',
-      icon: 'asset/mobile.png',
-      title: 'Web Design',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-      img: 'https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930',
-    },
-    {
-      id: '2',
-      icon: 'asset/globe.png',
-      title: 'Mobile Application',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      img: 'https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg',
-    },
-    {
-      id: '3',
-      icon: 'asset/writing.png',
-      title: 'Branding',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      img: 'https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg',
-    },
-  ];
+
   return (
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
@@ -61,8 +46,8 @@ const LandingPage = () => {
         <Tabs defaultSelectedIndex={0}>
           <TabList className="tabs-group" aria-label="Tab navigation">
             <Tab>About</Tab>
-            <Tab>Photo catalogue</Tab>
-            <Tab>Agro products</Tab>
+            <Tab>CRUD App</Tab>
+            <Tab>Photo Catalogue </Tab>
             <Tab>Clone App</Tab>
           </TabList>
           <TabPanels>
@@ -127,15 +112,54 @@ const LandingPage = () => {
               >
                 <div>
                   <img
-                    className="landing-page__illo"
-                    src={profileImg}
+                    className="landing-page__crud"
+                    src={crudAppImg1}
                     alt="Carbon illustration"
                   />
                 </div>
-                <div data-src="/twitter-green.png">2</div>
-                <div data-src="/unsplash.png">3</div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={crudAppImg2}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={crudAppImg3}
+                    alt="Carbon illustration"
+                  />
+                </div>
 
-                <div>4</div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={crudAppImg4}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={crudAppImg5}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={crudAppImg6}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={crudAppImg7}
+                    alt="Carbon illustration"
+                  />
+                </div>
               </AutoplaySlider>
               <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                 <h3> &nbsp; </h3>
