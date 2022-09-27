@@ -6,7 +6,7 @@ import TutorialHeader from './components/TutorialHeader';
 import { Route, BrowserRouter, Switch, Routes } from 'react-router-dom';
 import LandingPage from './content/LandingPage';
 import RepoPage from './content/RepoPage';
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -22,7 +22,7 @@ class App extends Component {
               <Route path="/" element={<LandingPage />} />
               <Route path="/repos" element={<RepoPage />} />
             </Routes>
-            <Outlet />
+            {/* <Outlet /> */}
           </Content>
         </BrowserRouter>
       </>
