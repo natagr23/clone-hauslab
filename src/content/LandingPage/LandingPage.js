@@ -52,7 +52,7 @@ const LandingPage = () => {
             <Tab>About</Tab>
             <Tab>CRUD App</Tab>
             <Tab>Photo Catalogue </Tab>
-            <Tab>Chart with IDEAM data</Tab>
+            <Tab>Weather Charts</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -114,7 +114,7 @@ const LandingPage = () => {
               <AutoplaySlider
                 play={true}
                 cancelOnInteraction={false} // should stop playing on user interaction
-                interval={5000}
+                interval={3000}
               >
                 <div>
                   <img
@@ -123,6 +123,7 @@ const LandingPage = () => {
                     alt="Carbon illustration"
                   />
                 </div>
+
                 <div>
                   <img
                     className="landing-page__crud"
@@ -166,6 +167,12 @@ const LandingPage = () => {
                     alt="Carbon illustration"
                   />
                 </div>
+                <Button>
+                  <Link href={'https://github.com/natagr23/Agro_App'}>
+                    <LogoGithub size={50} />
+                    {/* Github Profile */}
+                  </Link>
+                </Button>
               </AutoplaySlider>
               <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                 <h3> &nbsp; </h3>
@@ -176,7 +183,7 @@ const LandingPage = () => {
               <AutoplaySlider
                 play={true}
                 cancelOnInteraction={false} // should stop playing on user interaction
-                interval={5000}
+                interval={3000}
               >
                 <div>
                   <img
@@ -199,6 +206,12 @@ const LandingPage = () => {
                     alt="Carbon illustration"
                   />
                 </div>
+                <Button>
+                  <Link href={'https://github.com/natagr23/old-photos'}>
+                    <LogoGithub size={50} />
+                    {/* Github Profile */}
+                  </Link>
+                </Button>
               </AutoplaySlider>
               <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                 <h3> &nbsp; </h3>
@@ -209,7 +222,7 @@ const LandingPage = () => {
               <AutoplaySlider
                 play={true}
                 cancelOnInteraction={false} // should stop playing on user interaction
-                interval={5000}
+                interval={3000}
               >
                 <div>
                   <img
@@ -218,6 +231,12 @@ const LandingPage = () => {
                     alt="Carbon illustration"
                   />
                 </div>
+                <Button>
+                  <Link href={'https://github.com/natagr23/weather-statistics'}>
+                    <LogoGithub size={50} />
+                    {/* Github Profile */}
+                  </Link>
+                </Button>
               </AutoplaySlider>
               <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
                 <h3> &nbsp; </h3>
