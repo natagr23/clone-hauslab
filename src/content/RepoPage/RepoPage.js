@@ -23,6 +23,7 @@ const RepoPage = () => {
         <Page pageNumber={pageNumber} />
         <Page pageNumber={2} />
         <Page pageNumber={3} />
+        <Page pageNumber={4} />
       </Document>
       {/* <p>
         Page {pageNumber} of {numPages}
