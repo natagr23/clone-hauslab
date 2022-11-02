@@ -43,7 +43,7 @@ const LandingPage = () => {
         <Breadcrumb noTrailingSlash aria-label="Page navigation"></Breadcrumb>
         <h5 className="landing-page__heading">
           {/* Design &amp; build with Carbon */}
-          Portafolio
+          Portfolio
         </h5>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
