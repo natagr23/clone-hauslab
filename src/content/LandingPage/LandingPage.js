@@ -66,11 +66,11 @@ const LandingPage = () => {
                   <h2 className="landing-page__subheading">Experience</h2>
                   <p className="landing-page__p2">
                     I am an engineer passionate about web programming and
-                    constantly learning new technologies and tools. I have
-                    worked with React.js, CSS, Carbon Design, MUI,Bootstrap,
-                    Tailwind, Git/GitHub and Firebase. During my master's
-                    studies I used meteorological data to evaluate a
-                    hydrological model using R.
+                    constantly learning new technologies. Coding on front-end
+                    technologies such as Vue.js, React.js, Bootstrap,
+                    Material-UI. Skills: Django, GIT, Docker, Scrum, Microsoft
+                    Azure. During my master's studies I used meteorological data
+                    to evaluate a hydrological model using R.
                   </p>
                   <hr />
                   <Link
