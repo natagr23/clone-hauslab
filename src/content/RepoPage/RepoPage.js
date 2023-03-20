@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { Button } from '@carbon/react';
-import pdf from '../../Data/NGR_CV_Msc.pdf';
+import pdf from '../../Data/NGR_CV_Msc_c.pdf';
 import { saveAs } from 'file-saver';
 
 const RepoPage = () => {
@@ -9,7 +9,7 @@ const RepoPage = () => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const saveFile = () => {
-    saveAs(pdf, 'CV_NGR.pdf');
+    saveAs(pdf, 'NGR_CV_Msc_c.pdf');
   };
 
   function onDocumentLoadSuccess({ numPages }) {
