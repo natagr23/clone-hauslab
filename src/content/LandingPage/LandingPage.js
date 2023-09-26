@@ -32,6 +32,11 @@ import crudAppImg7 from '../../Data/crud7.jpg';
 import catalogueImg1 from '../../Data/catalogue1.JPG';
 import catalogueImg2 from '../../Data/catalogue2.JPG';
 import catalogueImg3 from '../../Data/catalogue3.JPG';
+import awsImg1 from '../../Data/aws_crud1.PNG';
+import awsImg2 from '../../Data/aws_crud2.PNG';
+import awsImg3 from '../../Data/aws_crud3.PNG';
+import awsImg4 from '../../Data/aws_crud4.PNG';
+import awsImg5 from '../../Data/aws_crud5.PNG';
 import d3graph from '../../Data/d3.JPG';
 
 const LandingPage = () => {
@@ -50,7 +55,8 @@ const LandingPage = () => {
         <Tabs defaultSelectedIndex={0}>
           <TabList className="tabs-group" aria-label="Tab navigation">
             <Tab>About</Tab>
-            <Tab>CRUD App</Tab>
+            <Tab>CRUD AWS App</Tab>
+            <Tab>CRUD Google firebase App</Tab>
             <Tab>Photo Catalogue </Tab>
             <Tab>Weather Charts</Tab>
           </TabList>
@@ -68,7 +74,8 @@ const LandingPage = () => {
                     I am an engineer passionate about web programming and
                     constantly learning new technologies. Coding on front-end
                     technologies such as Vue.js, React.js, Bootstrap,
-                    Material-UI. Skills: Django, GIT, Docker, Scrum, Microsoft
+                    Material-UI. Backend: AWS Amplify, Cognito, IAM and
+                    DynamoDB. Skills: Django, GIT, Docker, Scrum, Microsoft
                     Azure. During my master's studies I used meteorological data
                     to evaluate a hydrological model using R.
                   </p>
@@ -109,6 +116,60 @@ const LandingPage = () => {
                   />
                 </Column>
               </Grid>
+            </TabPanel>
+            <TabPanel>
+              <AutoplaySlider
+                play={true}
+                cancelOnInteraction={false} // should stop playing on user interaction
+                interval={3000}
+              >
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={awsImg1}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={awsImg2}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={awsImg3}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={awsImg4}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={awsImg5}
+                    alt="Carbon illustration"
+                  />
+                </div>
+
+                <Button>
+                  <Link href={'https://github.com/natagr23/amplify-nextjs-app'}>
+                    <LogoGithub size={50} />
+                    {/* Github Profile */}
+                  </Link>
+                </Button>
+              </AutoplaySlider>
+              <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
+                <h3> &nbsp; </h3>
+                <h3> &nbsp;</h3>
+              </Column>
             </TabPanel>
             <TabPanel>
               <AutoplaySlider
