@@ -32,11 +32,8 @@ import crudAppImg7 from '../../Data/crud7.jpg';
 import catalogueImg1 from '../../Data/catalogue1.JPG';
 import catalogueImg2 from '../../Data/catalogue2.JPG';
 import catalogueImg3 from '../../Data/catalogue3.JPG';
-import awsImg1 from '../../Data/aws_crud1.PNG';
-import awsImg2 from '../../Data/aws_crud2.PNG';
-import awsImg3 from '../../Data/aws_crud3.PNG';
-import awsImg4 from '../../Data/aws_crud4.PNG';
-import awsImg5 from '../../Data/aws_crud5.PNG';
+import timeline1 from '../../Data/timeline1.jpg';
+import timeline2 from '../../Data/timeline2.jpg';
 import d3graph from '../../Data/d3.JPG';
 
 const LandingPage = () => {
@@ -55,8 +52,8 @@ const LandingPage = () => {
         <Tabs defaultSelectedIndex={0}>
           <TabList className="tabs-group" aria-label="Tab navigation">
             <Tab>About</Tab>
-            <Tab>CRUD AWS App</Tab>
-            <Tab>CRUD Google firebase App</Tab>
+            <Tab>Timeline Next.js</Tab>
+             <Tab>CRUD Google firebase App</Tab>
             <Tab>Photo Catalogue </Tab>
             <Tab>Weather Charts</Tab>
           </TabList>
@@ -126,41 +123,21 @@ const LandingPage = () => {
                 <div>
                   <img
                     className="landing-page__crud"
-                    src={awsImg1}
-                    alt="Carbon illustration"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="landing-page__crud"
-                    src={awsImg2}
-                    alt="Carbon illustration"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="landing-page__crud"
-                    src={awsImg3}
-                    alt="Carbon illustration"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="landing-page__crud"
-                    src={awsImg4}
-                    alt="Carbon illustration"
-                  />
-                </div>
-                <div>
-                  <img
-                    className="landing-page__crud"
-                    src={awsImg5}
+                    src={timeline1}
                     alt="Carbon illustration"
                   />
                 </div>
 
+                <div>
+                  <img
+                    className="landing-page__crud"
+                    src={timeline2}
+                    alt="Carbon illustration"
+                  />
+                </div>
+                
                 <Button>
-                  <Link href={'https://github.com/natagr23/amplify-nextjs-app'}>
+                  <Link href={'https://github.com/natagr23/timeline-nextjs'}>
                     <LogoGithub size={50} />
                     {/* Github Profile */}
                   </Link>
